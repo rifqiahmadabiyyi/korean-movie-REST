@@ -64,10 +64,10 @@ app.put('/api/movies/:id', (req, res) => {
                     return res.status(500).json({ message: 'Ada kesalahan', error: err });
                 }
 
-                res.status(200).json({ success: true, message: 'Berhasil update data!' });
+                res.status(200).json({ success: true, message: 'Data has been updated!' });
             });
         } else {
-            return res.status(404).json({ message: 'Data tidak ditemukan!', success: false });
+            return res.status(404).json({ message: 'Data not found!', success: false });
         }
     });
 });
@@ -88,10 +88,10 @@ app.delete('/api/movies/:id', (req, res) => {
                     return res.status(500).json({ message: 'Ada kesalahan', error: err });
                 }
 
-                res.status(200).json({ success: true, message: 'Berhasil hapus data!' });
+                res.status(200).json({ success: true, message: 'Data has been deleted!' });
             });
         } else {
-            return res.status(404).json({ message: 'Data tidak ditemukan!', success: false });
+            return res.status(404).json({ message: 'Data not found!', success: false });
         }
     });
 });
